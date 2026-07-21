@@ -71,9 +71,8 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         />
         <div className="mx-auto grid max-w-[1200px] grid-cols-[auto_1fr_auto] items-center gap-4 px-5 md:px-8 lg:px-12">
           <Link href={`/${locale}`} className="col-start-1 flex flex-shrink-0 items-center gap-2.5">
-            <Image src="/logo.png" alt="Dr. Alimbekov" width={58} height={36} className="h-9 w-auto" priority />
+            <Image src="/logo.png" alt="Dr. Alimbekov" width={58} height={36} sizes="58px" className="h-9 w-auto" priority/>
           </Link>
-
           <nav className="col-start-2 hidden min-w-0 max-w-full justify-self-center overflow-hidden rounded-full bg-fog p-1.5 [@media(min-width:1180px)]:flex">
             {navItems.map((item) => (
               <Link
@@ -94,14 +93,13 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               href={waHref}
               external
               icon={<WhatsAppIcon className="h-5 w-5 shrink-0" />}
-              className="hidden sm:inline-flex"
-            >
+              className="!hidden md:!inline-flex">
               {dict.common.bookShort}
             </Button>
             <button
               onClick={() => setMobileOpen(true)}
               aria-label="Menu"
-              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-fog [@media(min-width:1180px)]:hidden"
+              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-fog xl:hidden"
             >
               <Menu className="h-5.5 w-5.5" />
             </button>
@@ -116,7 +114,14 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       >
         <div className="mb-10 flex items-center justify-between">
           <Link href={`/${locale}`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5">
-            <Image src="/logo.png" alt="Dr. Alimbekov" width={48} height={31} className="h-8 w-auto" />
+            <Image
+            src="/logo.png"
+            alt="Dr. Alimbekov"
+            width={48}
+            height={31}
+            sizes="48px"
+            className="h-8 w-auto"
+          />
           </Link>
           <button
             onClick={() => setMobileOpen(false)}

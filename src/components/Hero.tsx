@@ -88,7 +88,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
         <div className="relative flex min-h-[460px] items-center justify-center p-5">
           <div className="absolute inset-0 -z-10 h-[130%] w-[130%] -translate-x-[7.5%] -translate-y-[7.5%] bg-[radial-gradient(circle_at_28%_28%,var(--color-mist),transparent_60%),radial-gradient(circle_at_78%_74%,rgba(32,195,170,0.20),transparent_55%)]" />
 
-          <div className="absolute right-1 top-1.5 z-10 flex animate-[floaty_5s_ease-in-out_infinite] items-center gap-2.5 rounded-2xl border border-ink/8 bg-white px-4 py-2.5 shadow-card-md">
+          <div className="absolute right-1 top-1.5 z-25 flex animate-[floaty_5s_ease-in-out_infinite] items-center gap-2.5 rounded-2xl border border-ink/8 bg-white px-4 py-2.5 shadow-card-md">
             <Star className="h-5 w-5 fill-current text-primary" />
             <div>
               <b className="block text-sm leading-tight">4.9</b>
@@ -103,7 +103,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
               </div>
               <div>
                 <div className="text-sm font-bold">Dr. Alimbekov</div>
-                <div className="flex items-center gap-1.5 text-xs text-primary">
+                <div className="flex items-center gap-1.5 text-xs font-medium text-primary-dark">
                   <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                   {dict.hero.chatOnline}
                 </div>
@@ -119,7 +119,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
             </div>
           </div>
 
-          <div className="absolute bottom-5.5 left-0 z-10 flex animate-[floaty_5s_ease-in-out_infinite_1.4s] items-center gap-2.5 rounded-2xl border border-ink/8 bg-white px-4 py-2.5 shadow-card-md">
+          <div className="absolute bottom-5.5 left-0 z-25 flex animate-[floaty_5s_ease-in-out_infinite_1.4s] items-center gap-2.5 rounded-2xl border border-ink/8 bg-white px-4 py-2.5 shadow-card-md">
             <Award className="h-5 w-5 text-primary" />
             <div>
               <b className="block text-sm leading-tight">{dict.hero.badgeExpNum}</b>

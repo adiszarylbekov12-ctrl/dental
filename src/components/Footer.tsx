@@ -90,7 +90,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-7 text-[13px] text-white/45">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-7 text-[13px] text-white/65">
           <span>
             © {year} Dr. Alimbekov. {dict.footer.rights}
           </span>
