@@ -20,10 +20,9 @@ export function Counter({ target, suffix = "" }: { target: number; suffix?: stri
     return () => controls.stop();
   }, [inView, target]);
 
-  return (
-    <span ref={ref}>
-      {value.toLocaleString("ru-RU")}
-      {suffix}
-    </span>
-  );
+return (
+  <span ref={ref} className="whitespace-nowrap">
+    {`${value.toLocaleString("ru-RU").replace(/\s/g, "\u00A0")}${suffix}`}
+  </span>
+);
 }

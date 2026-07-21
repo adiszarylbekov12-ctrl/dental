@@ -71,7 +71,15 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         />
         <div className="mx-auto grid max-w-[1200px] grid-cols-[auto_1fr_auto] items-center gap-4 px-5 md:px-8 lg:px-12">
           <Link href={`/${locale}`} className="col-start-1 flex flex-shrink-0 items-center gap-2.5">
-            <Image src="/logo.png" alt="Dr. Alimbekov" width={58} height={36} sizes="58px" className="h-9 w-auto" priority/>
+           <Image
+            src="/logo.png"
+            alt="Dr. Alimbekov"
+            width={96}
+            height={60}
+            sizes="(max-width: 768px) 64px, 96px"
+            className="h-10 w-auto md:h-12"
+            priority
+          />
           </Link>
           <nav className="col-start-2 hidden min-w-0 max-w-full justify-self-center overflow-hidden rounded-full bg-fog p-1.5 [@media(min-width:1180px)]:flex">
             {navItems.map((item) => (
@@ -114,13 +122,13 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       >
         <div className="mb-10 flex items-center justify-between">
           <Link href={`/${locale}`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5">
-            <Image
+           <Image
             src="/logo.png"
             alt="Dr. Alimbekov"
-            width={48}
-            height={31}
-            sizes="48px"
-            className="h-8 w-auto"
+            width={64}
+            height={40}
+            sizes="64px"
+            className="h-10 w-auto"
           />
           </Link>
           <button
